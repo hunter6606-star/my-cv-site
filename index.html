@@ -24,7 +24,6 @@
             padding: 0 20px;
         }
         
-        /* Header */
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -53,6 +52,8 @@
             font-weight: bold;
             font-size: 1.1em;
             transition: transform 0.3s;
+            border: none;
+            cursor: pointer;
         }
         
         .cta-button:hover {
@@ -60,7 +61,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
-        /* Services */
         .services {
             padding: 60px 0;
             background: white;
@@ -103,7 +103,6 @@
             color: #667eea;
         }
         
-        /* Pricing */
         .pricing {
             padding: 60px 0;
             background: #f8f9fa;
@@ -117,9 +116,9 @@
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            max-width: 900px;
+            max-width: 500px;
             margin: 0 auto;
         }
         
@@ -133,7 +132,6 @@
         
         .price-card.featured {
             border: 3px solid #667eea;
-            transform: scale(1.05);
         }
         
         .price {
@@ -153,7 +151,58 @@
             border-bottom: 1px solid #eee;
         }
         
-        /* Order Form */
+        .paypal-btn {
+            background: #0070ba !important;
+            color: white !important;
+            margin: 10px 5px !important;
+        }
+        
+        .usdt-btn {
+            background: #26a17b !important;
+            color: white !important;
+            margin: 10px 5px !important;
+        }
+        
+        #usdt-address {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        #usdt-address p {
+            margin-bottom: 10px;
+        }
+        
+        #usdt-address .address {
+            font-size: 0.85em;
+            word-break: break-all;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        
+        .copy-btn {
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .copy-msg {
+            margin-top: 10px;
+            color: green;
+            display: none;
+        }
+        
         .order-section {
             padding: 60px 0;
             background: white;
@@ -184,8 +233,7 @@
         }
         
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group textarea {
             width: 100%;
             padding: 12px;
             border: 2px solid #ddd;
@@ -215,7 +263,6 @@
             transform: translateY(-2px);
         }
         
-        /* Footer */
         footer {
             background: #333;
             color: white;
@@ -233,20 +280,27 @@
             margin-top: 20px;
             font-weight: bold;
         }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #856404;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <h1>سيرتي</h1>
             <p>نساعدك في الحصول على وظيفة أحلامك بسيرة ذاتية احترافية</p>
-            <a href="#order" class="cta-button">اطلب سيرتك الآن</a>
+            <a href="#pricing" class="cta-button">اطلب سيرتك الآن</a>
         </div>
     </header>
 
-    <!-- Services -->
     <section class="services">
         <div class="container">
             <h2>خدماتنا</h2>
@@ -270,103 +324,116 @@
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
-            <h2>الباقات</h2>
+            <h2>السعر</h2>
             <div class="pricing-grid">
-                <div class="price-card">
-                    <h3>الباقة الأساسية</h3>
+                <div class="price-card featured">
+                    <h3>الباقة الكاملة</h3>
                     <div class="price">$15</div>
                     <ul class="price-features">
-                        <li>سيرة ذاتية احترافية</li>
-                        <li>تصميم جذاب</li>
-                        <li>تسليم خلال 24 ساعة</li>
+                        <li>✓ سيرة ذاتية احترافية</li>
+                        <li>✓ رسالة تغطية مخصصة</li>
+                        <li>✓ تحسين ملف LinkedIn</li>
+                        <li>✓ تصميم عصري وجذاب</li>
+                        <li>✓ تسليم خلال 24 ساعة</li>
+                        <li>✓ تعديلات مجانية</li>
                     </ul>
-                    <a href="#order" class="cta-button">اختر الباقة</a>
-                </div>
-                <div class="price-card featured">
-                    <h3>الباقة المتكاملة</h3>
-                    <div class="price">$25</div>
-                    <ul class="price-features">
-                        <li>سيرة ذاتية احترافية</li>
-                        <li>رسالة تغطية مخصصة</li>
-                        <li>تحسين LinkedIn</li>
-                        <li>تسليم خلال 24 ساعة</li>
-                    </ul>
-                    <a href="#order" class="cta-button">اختر الباقة</a>
+                    <p style="margin: 20px 0; color: #666; font-weight: bold;">اختر طريقة الدفع:</p>
+                    <a href="https://www.paypal.com/ncp/payment/PTWX6RWF87EG8" target="_blank" class="cta-button paypal-btn">ادفع بـ PayPal - $15</a>
+                    <button onclick="showUSDT()" class="cta-button usdt-btn">ادفع بـ USDT</button>
+                    
+                    <div id="usdt-address">
+                        <p><strong>عنوان USDT (TRC20):</strong></p>
+                        <p class="address">THSHac3mrK1A8Fu4CDxwKfDK2zJMKMXiow</p>
+                        <button onclick="copyUSDT()" class="copy-btn">📋 نسخ العنوان</button>
+                        <p class="copy-msg" id="copy-msg">✓ تم النسخ!</p>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+                            <strong>المبلغ:</strong> 15 USDT<br>
+                            <strong>الشبكة:</strong> TRC20 (Tron)
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Order Form -->
     <section class="order-section" id="order">
         <div class="container">
-            <h2>اطلب الآن</h2>
-            <form class="order-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label>الاسم الكامل</label>
-                    <input type="text" id="name" required placeholder="أدخل اسمك الثلاثي">
+            <h2>أرسل بياناتك بعد الدفع</h2>
+            <div class="order-form">
+                <div class="note">
+                    ⚠️ يرجى إتمام الدفع أولاً، ثم املأ هذا النموذج لإرسال بياناتك وطلبك.
                 </div>
-                <div class="form-group">
-                    <label>البريد الإلكتروني</label>
-                    <input type="email" id="email" required placeholder="example@email.com">
-                </div>
-                <div class="form-group">
-                    <label>رقم الواتساب</label>
-                    <input type="tel" id="phone" required placeholder="مثال: +966501234567">
-                </div>
-                <div class="form-group">
-                    <label>الباقة المختارة</label>
-                    <select id="package" required>
-                        <option value="">اختر الباقة</option>
-                        <option value="basic">الباقة الأساسية - $15</option>
-                        <option value="premium">الباقة المتكاملة - $25</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>معلومات عن خبراتك ومهاراتك</label>
-                    <textarea id="info" rows="5" required placeholder="اكتب نبذة عن تعليمك، خبراتك العملية، المهارات، والوظيفة التي تستهدفها"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">إرسال الطلب</button>
-            </form>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" id="name" required placeholder="أدخل اسمك الثلاثي">
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" id="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الواتساب</label>
+                        <input type="tel" id="phone" required placeholder="مثال: +966501234567">
+                    </div>
+                    <div class="form-group">
+                        <label>طريقة الدفع المستخدمة</label>
+                        <input type="text" id="payment" required placeholder="PayPal أو USDT">
+                    </div>
+                    <div class="form-group">
+                        <label>معلومات عن خبراتك ومهاراتك</label>
+                        <textarea id="info" rows="5" required placeholder="اكتب نبذة عن تعليمك، خبراتك العملية، المهارات، والوظيفة التي تستهدفها"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">📨 إرسال الطلب عبر واتساب</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>سيرتي - نساعدك في بناء مستقبلك المهني</p>
-            <a href="https://wa.me/966566606151" class="whatsapp-btn" id="whatsapp-link">تواصل معنا عبر واتساب</a>
+            <a href="https://wa.me/966566606151" class="whatsapp-btn">💬 تواصل معنا عبر واتساب</a>
         </div>
     </footer>
 
     <script>
+        function showUSDT() {
+            var address = document.getElementById('usdt-address');
+            if (address.style.display === 'none' || address.style.display === '') {
+                address.style.display = 'block';
+            } else {
+                address.style.display = 'none';
+            }
+        }
+        
+        function copyUSDT() {
+            navigator.clipboard.writeText('THSHac3mrK1A8Fu4CDxwKfDK2zJMKMXiow');
+            document.getElementById('copy-msg').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('copy-msg').style.display = 'none';
+            }, 2000);
+        }
+        
         function handleSubmit(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const package = document.getElementById('package').value;
-            const info = document.getElementById('info').value;
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var payment = document.getElementById('payment').value;
+            var info = document.getElementById('info').value;
             
-            const message = `طلب جديد لكتابة سيرة ذاتية!
+            var message = 'طلب جديد لكتابة سيرة ذاتية!' + 
+                '\n\nالاسم: ' + name +
+                '\nالبريد: ' + email +
+                '\nالهاتف: ' + phone +
+                '\nطريقة الدفع: ' + payment +
+                '\n\nالمعلومات:\n' + info;
             
-الاسم: ${name}
-البريد: ${email}
-الهاتف: ${phone}
-الباقة: ${package}
-
-المعلومات:
-${info}`;
-
-            // هنا يمكنك إرسال البيانات إلى بريدك أو واتساب
-            alert('تم استلام طلبك! سنتواصل معك خلال ساعة.');
-            
-            // فتح واتساب مع الرسالة
-            const whatsappUrl = `https://wa.me/966566606151?text=${encodeURIComponent(message)}`;
+            var whatsappUrl = 'https://wa.me/966566606151?text=' + encodeURIComponent(message);
             window.open(whatsappUrl, '_blank');
         }
     </script>
