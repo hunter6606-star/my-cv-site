@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرتي - كتابة سير ذاتية احترافية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Services */
+        .services {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .services h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .price-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .price-card.featured {
+            border: 3px solid #667eea;
+            transform: scale(1.05);
+        }
+        
+        .price {
+            font-size: 3em;
+            color: #667eea;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .price-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .price-features li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Order Form */
+        .order-section {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .order-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+        
+        .order-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>سيرتي</h1>
+            <p>نساعدك في الحصول على وظيفة أحلامك بسيرة ذاتية احترافية</p>
+            <a href="#order" class="cta-button">اطلب سيرتك الآن</a>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2>خدماتنا</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>سيرة ذاتية احترافية</h3>
+                    <p>سيرة ذاتية بتصميم عصري وجذاب يلفت انتباه مديري التوظيف</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>رسالة تغطية</h3>
+                    <p>رسالة مخصصة لكل وظيفة تزيد فرصك في الحصول على المقابلة</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>تحسين LinkedIn</h3>
+                    <p>تحسين ملفك على لينكد إن لجذب فرص العمل</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2>الباقات</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>الباقة الأساسية</h3>
+                    <div class="price">$15</div>
+                    <ul class="price-features">
+                        <li>سيرة ذاتية احترافية</li>
+                        <li>تصميم جذاب</li>
+                        <li>تسليم خلال 24 ساعة</li>
+                    </ul>
+                    <a href="#order" class="cta-button">اختر الباقة</a>
+                </div>
+                <div class="price-card featured">
+                    <h3>الباقة المتكاملة</h3>
+                    <div class="price">$25</div>
+                    <ul class="price-features">
+                        <li>سيرة ذاتية احترافية</li>
+                        <li>رسالة تغطية مخصصة</li>
+                        <li>تحسين LinkedIn</li>
+                        <li>تسليم خلال 24 ساعة</li>
+                    </ul>
+                    <a href="#order" class="cta-button">اختر الباقة</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-section" id="order">
+        <div class="container">
+            <h2>اطلب الآن</h2>
+            <form class="order-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label>الاسم الكامل</label>
+                    <input type="text" id="name" required placeholder="أدخل اسمك الثلاثي">
+                </div>
+                <div class="form-group">
+                    <label>البريد الإلكتروني</label>
+                    <input type="email" id="email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label>رقم الواتساب</label>
+                    <input type="tel" id="phone" required placeholder="مثال: +966501234567">
+                </div>
+                <div class="form-group">
+                    <label>الباقة المختارة</label>
+                    <select id="package" required>
+                        <option value="">اختر الباقة</option>
+                        <option value="basic">الباقة الأساسية - $15</option>
+                        <option value="premium">الباقة المتكاملة - $25</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>معلومات عن خبراتك ومهاراتك</label>
+                    <textarea id="info" rows="5" required placeholder="اكتب نبذة عن تعليمك، خبراتك العملية، المهارات، والوظيفة التي تستهدفها"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">إرسال الطلب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>سيرتي - نساعدك في بناء مستقبلك المهني</p>
+            <a href="https://wa.me/رقمك_هنا" class="whatsapp-btn" id="whatsapp-link">تواصل معنا عبر واتساب</a>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const package = document.getElementById('package').value;
+            const info = document.getElementById('info').value;
+            
+            const message = `طلب جديد لكتابة سيرة ذاتية!
+            
+الاسم: ${name}
+البريد: ${email}
+الهاتف: ${phone}
+الباقة: ${package}
+
+المعلومات:
+${info}`;
+
+            // هنا يمكنك إرسال البيانات إلى بريدك أو واتساب
+            alert('تم استلام طلبك! سنتواصل معك خلال ساعة.');
+            
+            // فتح واتساب مع الرسالة
+            const whatsappUrl = `https://wa.me/رقمك_هنا?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
